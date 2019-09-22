@@ -115,6 +115,11 @@
                                         <th>
                                             <span data-language="user_order_status">{$lang->user_order_status}</span>
                                         </th>
+                                        {if $orders['paid'] == 1 && $orders_status['is_close'] == 1}
+                                        <th>
+                                            <span data-language="user_order_status">{count($orders)}</span>
+                                        </th>
+                                        {/if}
                                     </tr>
                                     </thead>
                                     {foreach $orders as $order}
